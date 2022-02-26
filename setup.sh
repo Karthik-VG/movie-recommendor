@@ -8,4 +8,4 @@ headless = true\n\
 \n\
 " > ~/.streamlit/config.toml
 
-dvc pull model/similarty.pkl
+dvc pull model/similarity.pkl
