@@ -1,0 +1,4 @@
+outs:
+- md5: 9362555ba8239985bb6e3311a249bb3f
+  size: 184781248
+  path: similarity.pkl
