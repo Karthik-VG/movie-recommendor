@@ -2,6 +2,7 @@ import pickle
 import streamlit as st
 import requests
 import pandas as pd
+import os
 
 def fetch_poster(movie_id):
     url = "https://api.themoviedb.org/3/movie/{}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US".format(movie_id)
@@ -75,3 +76,10 @@ if st.button('Show Recommendation'):
 
 
 
+
+
+if "DYNO" in os.environ and os.path.isdir(".dvc"):
+    os.system("dvc config core.no_scm true")
+    if os.system(f"dvc pull")!=0:
+        exit("dvc pull failed")
+    os.system("rm -r .dvc .apt/usr/lib/dvc")
